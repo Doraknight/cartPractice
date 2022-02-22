@@ -12,7 +12,7 @@ function getInputField(inputID, isAdd) {
     const inputValue = parseInt(document.getElementById(inputID).value);
     if (isAdd == true) {
         document.getElementById(inputID).value = inputValue + 1;
-    } else {
+    } else if (inputValue > 0) {
         document.getElementById(inputID).value = inputValue - 1;
     }
 
