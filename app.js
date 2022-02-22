@@ -9,11 +9,12 @@ const minusCaseBtn = document.getElementById('case-minus');
 
 // function for input field::
 function getInputField(inputID, isAdd) {
-    const inputValue = parseInt(document.getElementById(inputID).value);
+    const inputValue = document.getElementById(inputID);
+    let productAmount = inputValue.value;
     if (isAdd == true) {
-        document.getElementById(inputID).value = inputValue + 1;
+        productAmount = parseInt(productAmount) + 1;
     } else if (inputValue > 0) {
-        document.getElementById(inputID).value = inputValue - 1;
+        productAmount = parseInt(productAmount) - 1;
     }
 
 }
